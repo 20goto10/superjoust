@@ -1,0 +1,20 @@
+Here's how I was able to recompile this under Mint (Debian/Ubuntu/what-have-you).
+
+1. Get dosbox and dosemu. 
+
+sudo apt-get install dosbox dosemu
+
+2. Find a copy of Turbo C 3.0 and TASM. You can do this through Google. I think it's actually been released to the public now. Either that or it's pirated. I paid for it in 1991 anyway and I don't have a floppy disk drive anymore so getting it online seems pretty legit to me.
+
+3. run DOSEMU, and install Turbo C into E:\TC ... it's probably easier to do this by unzipping the files under Linux.
+
+4. I created a batch file called compile.bat and ran it in DOSEMU:
+
+path e:\TC\BIN;%PATH%
+tcc -ml -2 -IE:\TC\INCLUDE -LE:\TC\LIB joust240.c %2 %3
+
+5. run joust240.exe
+
+Also try DOSBOX -- results seemed a little slower, but I'm not too sure.
+
+-Ben
