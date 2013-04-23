@@ -1,0 +1,31 @@
+# makefile MAKE V2.0 or higher
+
+
+# Set the required model here, either s, c or l (LOWER CASE ONLY)
+#
+
+MODEL=l
+
+XLIB_VERSION=06
+
+# Set the compiler: either BCC or TCC
+#
+CC=tcc -IE:\TC\include -LE:\TC\lib 
+
+TLIB=tlib
+
+AFLAGS  = /ml /zi /d$(MODEL)
+CFLAGS  = -m$(MODEL)
+CPPFLAGS= -m$(MODEL)
+LDFLAGS = -m$(MODEL)
+
+
+.c.obj:
+   $(CC) -c $(CFLAGS) $<
+
+.asm.obj:
+   tasm $(AFLAGS) $* \
+
+
+all: joust240.exe robots.exe
+

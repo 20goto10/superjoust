@@ -1,0 +1,55 @@
+Documentation to Graphical Level Maker (glevmake) v1.0
+for  S u p e r J o u s t v1.0
+by Ben Chadwick
+
+
+-----------------------------
+Things that always work:
+
+\     Switch increment from 1 to 8 or back
++     Increase background color
+-     Decrease background color
+[     Increase platform triplet pointer
+]     Decreate platform triplet pointer
+{     Inc text ptr
+}     Dec text ptr
+|     Enter text into current text item
+N     Activate current platform
+Q     Exit the editor
+F     Load a level
+G     Flip the existance of the goal
+I     Change the sprite of a goal
+# 1,2,3,4 - Switch to moving that player
+5     Switch to moving the goal
+6     Switch to moving text
+E     Save the level
+P     Move item (1,2,3,4,5,6) up
+L     Move it left
+'     Move it right
+;     Move it down
+
+Things that only work with an active platform:
+`     Change initial existance of the platform
+)     Increase type of effect
+(     Decrease type of effect
+O     Deactivate current platform
+!     Sets lower leftwise motion limit to current starting position of plat.
+@     Sets maximum rightwise motion limit
+#     Sets top upward motion limit
+$     Sets bottom motion limit
+(when a moving platform hits it's limit, it's direction reverses.)
+B     Input the effect of a BUTTON or FORCEFIELD
+A     Move platform left
+W     Move platform up
+S     Move platform down
+D     Move platform right
+V     Turn the thing vertical (don't use on conveyors)
+H     Turn it horizontal
+<     Lower it's length
+>     Increment it's length
+X     Decrease the X velocity
+C     Increase the X velocity
+7     Decrease the Y velocity
+8     Increase the Y velocity
+R     Set platform cycle information
+-------------------------------------

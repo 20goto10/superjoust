@@ -1,0 +1,264 @@
+SUPER JOUST! by Ben Chadwick
+---------------------------
+THIS VERSION IS FOR PLAY-TESTING!!!
+
+Table of Contents
+-----------------
+
+1 ... Command Line Options
+2 ... The Options Menu
+3 ... Playing Joust
+4 ... Key Configuration
+5 ... Levels
+6 ... Animal information
+7 ... Notes for people studying physics
+8 ... Stuff the author put in
+9 ... About the author
+
+SuperJoust! It's like Joust, only better, and quite different.
+(If you want a true-to-arcade Joust simulator, check out Dave/Ron Sharpless'
+Joust-VGA which is excellent.)
+SuperJoust is Joust for those who want to play against other humans in
+new and exotic ways.  SuperJoust is a cross between Joust, Star Control,
+and Mail Order Monsters (a classic, try to find it if you have a C64.)
+
+Chapter 1.........Command Line Options
+
+  There is one command line option.  Type JOUST [insert anything here] and
+you can skip the intro scene.
+
+Chapter 2.........The Options Menu
+
+Keys:
+1,2,3,4  --  Change mount for players 1,2,3,4, respectively.
+A,B,I,L  --  Change special ability for players 1,2,3,4, respectively.
+             The abilities are:
+             NONE - No special ability, obviously.
+             STUNNING SQUAWK - Stuns the other players mounts, thus
+              forcing them to lose control for a few moments.  When a
+              player's mount is stunned, stars appear above it's head.
+             DROPPING BELLOW - Makes all other players fall a few feet,
+              without changing their velocities.
+             UNHARMABILITY - The player cannot be harmed by anything.
+              He will pass over mines, shots, and through other players.
+              When a unharmability is active, a field appears around the
+              player.  When two unharmable players collide, neither is
+              hurt.  If they are at exactly the same level, they bounce
+              off.
+             INVISIBILITY - The player cannot be seen by anyone.  When
+              a player is invisible, his icon disapears also.
+             LIGHTNING ARMOR - Lightning armor kills other players,
+              stops bullets, and clears away mines.  When this is
+              active, an electric field appears around the player.
+              When two lightning-active players collide, the event
+              is resolved in the normal manner.
+             SWITCH ANIMAL - Changes the type of mount a player is
+              flying on.
+             SHOOT BULLET - Fires a bullet from the player's lance.  The
+              bullet travels faster than any of the mounts.  If it hits
+              a player with lightning armor, the bullet dies.  If it
+              hits a mine, the mine explodes without harming players.
+              If it hits an unprotected player, the player dies.  The
+              bullet stops when it gets to the edge of the screen.  It
+              cannot harm it's shooter.
+             DROP MINE - Leaves a mine wherever the player is.  The
+              player cannot be hurt by his own mine.  Mines can be shot
+              down by bullets, or cleared by players with lightning
+              armor.  If a player hits a mine unprotected, the player is
+              killed.
+             [default:NONE]
+V        --  Turns waiting for vertical retrace on/off.
+             On certain monitors, the screen flickers if this is off.
+             This will slow down the game a tiny bit. [default: OFF]
++/-      --  Increase game delay.  '+' slows the game down.  This puts
+             a longer pause into the time between cycles of the game,
+             which can help slow it down for playing on faster
+             computers. '-' speeds up the game.  On a 386, 0 is a good
+             delay, and can even be too fast for some levels.  On a 486
+             a higher delay is necessary. [default: 0]
+R        --  Reset the winner statistics to 0 for each player.
+S        --  Special abilities on/off.  With this off, the game is
+             much more like the classic version. [default: ON]
+P        --  Turns on/off platforms.  Platforms off speeds up the
+             game a lot, but it also ruins puzzle/goal-type levels.
+             [default: ON]
+N        --  Turns numbers above the players on/off.  This alleviates
+             confusion over which player is which, the classic "Which
+             guy am I?" problem. [default: OFF]
+U        --  Unharmable opening on/off.  If this is on, all players
+             spend the first 100 game cycles with UNHARMABILITY on,
+             whether they have that special ability or not.  This gives
+             players a little time to get adjusted or get where they
+             want to be when the game gets in gear. [default: ON]
+H        --  Half speed gravity.  This makes the game much easier;
+             it is included because in multiplayer games, not all keystrokes
+             will be received by the computer (them's breaks.)  Thus
+             fewer flaps are required to keep a mount aloft.
+Q        --  Quit the game.
+
+Chapter 3.........Playing Joust
+
+  In the classic Joust tradition, when two players collide, whichever
+player is higher wins a battle.  The animals have to flap their wings
+to become airborne, and of course, rapid flapping is the surest way to
+the top.
+  If the players collide at the same exact height, facing opposite
+directions: The players bounce off of each other.  If they face the same
+direction, one player is getting a lance in his back, and he loses.
+  When the players hit the ground there is a certain amount of bounce
+which can be used to their advantage.
+
+Chapter 4.........Key Configuration
+
+  To change the key configuration, run "KEYS.EXE".  The defaults are:
+
+Player -->      1          2          3        4
+Action
+  \/
+Flap:           W          Y          P      Up key/8 on num pad
+Left:           A          G          L      Left key/4 on num pad
+Right:          D          J          '      Right key/6 on num pad
+Special:        S          H          ;      Center key/5 on num pad
+
+Chapter 5.........Levels
+
+  The ASCII file "LEVELS.DAT" contains the names of all the levels
+currently being used and the number of levels in the file.  The first
+line of LEVELS.DAT is the number of levels, and each line afterwards is
+the name of one of the levels.  If the number at the top is changed
+
+Chapter 6.........Animal information
+
+  This chapter is devoted to notes about each type of animal.
+
+Killer Parrot  -- This enormous species hails from South America, not
+  far from the coast of Brazil, in the Amazon Basin.  Few have survived
+  to tell the tale of their encounter with a killer parrot.
+Pegasus        -- Ancient Greek myth tells the story of Pegasus, the
+  winged horse, and Bellerophon, who mastered this beast.
+Winged Buffalo -- Many have tasted the wings of these rare sights,
+  whose wings are considered a gourmet item in North American bars.
+  Winged Buffalos are found, thanks to bad wildlife preservation, in
+  only a few areas of the U.S.A., and due to game poaching, their
+  numbers are dwindling.
+Moth           -- Hailing from the hills of West Virginia campgrounds
+  come these moths with a 12 foot wingspan.  Attracted to the sight of
+  lanterns, these enormous moths are very easy to catch and tame for the
+  purposes of jousting.
+Banana Warrior -- From an experiment by Corazon Aquino's biotechnology
+  labs in the Philippines, known well around the world for their
+  DNA-splicing feats, come these 6 foot tall bananas who use their skins
+  to fly.  Their lifespan is short, and their brief moments are in pain
+  because of the exposure of their delicate insides to the corrosive
+  atmosphere.  However, the warriors die honorably, knowing that in
+  death, they will be combating world hunger.
+Catbird        -- Catbirds, which are winged cats, are constantly
+  inflicting pain upon themselves; they love the taste of feathers and
+  will bite their own wings for it.  But they are extremely quick
+  animals which handle well in combat.
+Bicycle Contraption -- In the 1880's T. Honus Pickford, an infamous
+  American inventor, created a scheme to get a bike off the ground with
+  wings.  Unfortunately his frame was too heavy, and he abandoned the
+  project.  His grandson, C. Dick Pickford, revised the plans with
+  modern day lightweight bicycle frames and thus created the most
+  effective flying bicycle yet.  "The bike is hard to get airborne, but
+  goes very fast." - Bicycling News World.
+Purple Dinosaur -- More DNA work in the fields of genetics
+  and paleontology has brought about the invention of these friendly,
+  stupid 6.5' purple dinosaurs, who have a knack for educating children
+  (those whom they don't eat first.)  They are very slow on the ground.
+  The wings of these beasts are very effective, and extremely strong.
+  Some jousters prefer the dinosaur's lack of speed for it's
+  controllability.
+Rolling Fish -- These fish, modified to live on the land, but physically
+  unequipped to do so, are mounted on wheels such that when they flap
+  their tails, they are able to go very fast, not unlike sailboats.  They
+  also have powerful fins to flap upwards with, and the fish have thus
+  adapted to living on land, in the air, and in the sea. These
+  intelligent fish seem to find their land and air abilities similar to
+  their sea skills, and can dart around at high speeds.
+Classic Ostrich -- The Classic Ostrich is the original jousting steed,
+  and while somewhat outdated, they are in style among jousters
+  (jousting fashion is a fickle thing).  These are very powerful birds.
+
+Chapter 7.........Notes for people studying physics
+
+  The world on which SuperJoust takes place is a strange one.  There is no
+wind resistance, so all creatures fall at the same rate; however, some are
+faster flyers than others, which might seem unusual, since the implication
+of no wind resistance implies that the animals are in a vacuum... Too bad.
+  The gravity in SuperJoust is an accurate simulation of the real thing,
+except scaled differently.  Gravity is, of course, acceleration, and is
+therefore measured in distance units per time unit squared.  SuperJoust
+gravity is no different, except that it is measured in the rather unusual
+(to normal physicists) pixels per game cycle squared.  At any rate, the
+parabolic arc of an object in the air is correct, so if you teach physics
+you might want to show this part to your class for an example.  Maybe not.
+(I mean, you could do the same thing with a tennis ball.  But kids like
+SuperJoust more than tennis.  Trust me.)
+  Collisions in SuperJoust are semi-accurate.  Crashing into walls is in-
+accurate, but crashing into other animals (at exactly the same height) is
+accurate, which is to say that momentum (mass*velocity) is taken into account.
+
+Chapter 8.........Game Stuff, notes by the author
+
+  This game was written on a 386 PS/2, 20 MHz.  My goal was a fun arcade
+game in the classic tradition that was fast enough to play on a 386.  I
+say this because most game companies write their games on top-of-the
+line machines and thus make their games unplayable on anything except
+that same processor.  If I wanted to write this on a Pentium, I wouldn't
+know if it was playable on a 386, see?  So by writing it on a slightly
+obsolete computer I have expanded the audience, etcetera.  You get the
+idea, blah, blah, blah.  I'm just complaining because I've played a lot
+of arcade games that sucked for speed *even* on a 486. (In 10 years I'll
+read that and laugh.  But I'll still be able to play SuperJoust, because
+it has delay control...)
+  By the way, if you enjoy playing this game half as much as I enjoyed
+writing it, then I enjoyed it twice as much as you.  Enjoy!
+  Save my life! Send me lots of money!  This money will probably be
+putting me through some college.  If it's not enough money I'll only be
+able to buy textbooks, and I'll have to sleep on the dangerous streets of
+New Haven (yeah, right) or someplace.
+  For 20 dollars or more, you will be registered, and I will send you a
+disk with registered SuperJoust, and put your name on a mailing list for
+other stuff, and each time there is a new version you'll get it.  You'll
+also get the level designer, and the sprite maker.
+  For less than 20 dollars I will appreciate the donation plenty, but
+you won't be registered.  Hey, this is worth 20 dollars!  At least I'm
+not asking as much as "truly commercial" software...
+
+  Empty your pockets off to:
+
+  Ben Chadwick
+  678 Old Hunt Way
+  Herndon, Va. 22070,
+  USA
+
+  And (sendmoney) there is no subliminal advertising in *any*
+(sendmoney) edition of SuperJoust, have no (sendmoney) fear.
+
+  Even if you don't like SuperJoust, just remember that your money will be
+going to a good cause (do I sound like PBS yet?) and that is
+    - supporting Shareware and
+    - appreciating the year of work that went into this project.
+
+  By the way, I appreciate all questions, comments, hate mail, love mail,
+money, and car keys, so feel free to send me any of these.  I will respond.
+I plan to make future versions of SuperJoust, and I need to know what the
+people want.  (If nobody registers, I suppose I won't bother...) Power to
+the people!
+
+
+About the Author
+----------------
+
+  Ben Chadwick is, at the time of this writing (November, 1994), a senior
+at Thomas Jefferson High School for Science and Technology, in Alexandria,
+Virginia, USA.  He has spent the last year writing SuperJoust when not
+doing thousands upon thousands of school assignments, and looks forward
+to getting in to college (he may not, since he spent so much time writing
+SuperJoust instead of doing the other thousand assignments).  The author
+hopes someday to be made wealthy enough to give some of his money to fighting
+homelessness, disease, and other evils of society; at the moment he is merely
+hoping to fight the evil of high college prices.
+
